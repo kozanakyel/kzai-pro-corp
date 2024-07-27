@@ -45,3 +45,4 @@ jobs:
             cd /home/next-supa-base
             chmod +x scripts/run-docker-production.sh
             ./scripts/run-docker-production.sh
+
