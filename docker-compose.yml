@@ -1,0 +1,39 @@
+version: '3.1'
+services:
+  next-supa-base:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: frontend
+    container_name: frontend
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - kzai-network
+
+  nginx:
+    image: nginx:latest
+    hostname: loadbalancer
+    container_name: loadbalancer
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./certbot/www/:/var/www/certbot/
+      - ./certbot/conf/live/kzai.pro/fullchain.pem:/etc/nginx/ssl/live/kzai.pro/fullchain.pem
+      - ./certbot/conf/live/kzai.pro/privkey.pem:/etc/nginx/ssl/live/kzai.pro/privkey.pem
+    networks:
+      - kzai-network
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/conf/:/etc/letsencrypt/:rw
+
+networks:
+  kzai-network:
+    driver: bridge
