@@ -24,6 +24,16 @@ jobs:
           source: '.'
           target: /home/next-supa-base
 
+      - name: Create .env file
+        uses: appleboy/ssh-action@v0.1.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          port: ${{ secrets.SSH_PORT }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            echo "${{ secrets.PROD_ENV_VARIABLES }}" > /home/next-supa-base/.env
+
       - name: Deploy Over SSH
         uses: appleboy/ssh-action@v0.1.3
         with:
