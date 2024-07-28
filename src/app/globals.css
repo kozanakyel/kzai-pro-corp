@@ -17,6 +17,7 @@
 }
 
 body {
+  @apply text-black bg-white;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +25,36 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+header {
+  @apply bg-black text-white p-4 text-center;
+}
+
+main {
+  @apply p-8;
+}
+
+footer {
+  @apply bg-black text-white text-center p-4 fixed bottom-0 w-full;
+}
+
+.container {
+  @apply flex flex-col items-center justify-center text-center p-6 bg-white rounded-lg shadow-md;
+  max-width: 400px;
+  width: 100%;
+}
+
+input, label {
+  @apply mt-2 mb-2 w-full;
+}
+
+input {
+  @apply p-2 border border-gray-300 rounded;
+}
+
+button {
+  @apply mt-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-700;
 }
 
 @layer utilities {
