@@ -1,25 +1,20 @@
-"use client";
-
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="container">
-      <header className="header">
-        <h1 className="text-3xl font-bold">Welcome to KZAI Pro</h1>
-      </header>
-      
-      <main className="main-content">
-        <p className="mt-4 text-lg">
-          Your AI-powered solution for financial market predictions.
+    <div className="flex flex-col justify-between min-h-screen">
+      <main className="flex-grow flex flex-col items-center justify-center text-center">
+        <h1 className="text-6xl font-bold">
+          KZAI
+        </h1>
+        <p className="mt-4 text-lg font-serif">
+          Problem Solving for AI based Applications
         </p>
-        <button onClick={() => alert('Get Started clicked')}>
-          Get Started
-        </button>
       </main>
 
-      <footer className="footer">
-        <p>© 2024 KZAI Pro. All rights reserved.</p>
+      <footer className="text-center pb-4">
+        <p className="text-sm text-gray-500">
+          Contact: <a href="mailto:kozanakyel@gmail.com" className="text-blue-500 hover:underline">kozanakyel@gmail.com</a>
+        </p>
       </footer>
     </div>
   );
