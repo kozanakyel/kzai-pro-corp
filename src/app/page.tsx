@@ -49,13 +49,17 @@ export default function Home() {
         </video>
       )}
 
-      <main className="flex-grow flex flex-col items-center justify-center text-center relative z-10">
+      <main className="flex-grow flex flex-col items-center justify-center text-center relative z-10 p-4">
         <h1 className="text-6xl font-bold text-white">KZAI</h1>
-        <p className="mt-4 text-lg font-serif text-white">Problem Solving and System Design for AI Based Applications</p>
+        <p className="mt-4 text-lg font-serif text-white sm:mt-6 sm:px-4">
+          Problem Solving for AI based Applications
+        </p>
       </main>
 
       <footer className="text-center pb-4 relative z-10">
-        <p className="text-sm text-gray-300">Contact: <a href="mailto:kozanakyel@gmail.com" className="text-blue-300 hover:underline">kozanakyel@gmail.com</a></p>
+        <p className="text-sm text-gray-300 sm:mb-4">
+          Contact: <a href="mailto:kozanakyel@gmail.com" className="text-blue-300 hover:underline">kozanakyel@gmail.com</a>
+        </p>
       </footer>
     </div>
   );
