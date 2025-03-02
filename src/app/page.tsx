@@ -256,13 +256,12 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-yellow-400">KZAI</span>
-              <p className="mt-2 text-gray-400">{t('footer.tagline')}</p>
+              <p className="mt-2 text-gray-400">{t('footer.slogan')}</p>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-center md:text-left">
               <a href="#services" className="hover:text-amber-400 transition-colors">{t('footer.services')}</a>
               <a href="#solutions" className="hover:text-amber-400 transition-colors">{t('footer.solutions')}</a>
               <a href="#about" className="hover:text-amber-400 transition-colors">{t('footer.about')}</a>
-              <a href="#contact" className="hover:text-amber-400 transition-colors">{t('footer.contact')}</a>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
