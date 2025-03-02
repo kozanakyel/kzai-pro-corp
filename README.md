@@ -13,7 +13,7 @@ KZAI CORP. develops cutting-edge AI solutions for modern businesses. Our platfor
 
 ## Project Structure
 
-This project is built using Next.js and Tailwind CSS, providing a modern and responsive user interface for showcasing our AI solutions.
+This project is built using Next.js and Tailwind CSS, providing a modern and responsive user interface for showcasing our AI solutions. It also includes localization support for English and Turkish.
 
 ### Key Features
 
@@ -22,6 +22,8 @@ This project is built using Next.js and Tailwind CSS, providing a modern and res
 - Clear presentation of our AI service offerings
 - Contact form for potential clients
 - Optimized for performance and SEO
+- Localization support for English and Turkish
+- Docker setup for easy deployment
 
 ## Development
 
@@ -29,6 +31,7 @@ This project is built using Next.js and Tailwind CSS, providing a modern and res
 
 - Node.js (v18+)
 - npm or yarn
+- Docker (for containerized deployment)
 
 ### Installation
 
@@ -62,6 +65,18 @@ yarn build
 npm start
 # or
 yarn start
+```
+
+### Docker
+
+To build and run the application using Docker:
+
+```bash
+# Build the Docker image
+docker build -t kzai-corp .
+
+# Run the Docker container
+docker run -p 8080:8080 kzai-corp
 ```
 
 ## Contact
