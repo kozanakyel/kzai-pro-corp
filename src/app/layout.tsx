@@ -5,8 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "KZAI",
-  description: "AI Solutions for All Use Cases",
+  title: "KZAI - AI Solutions for Business",
+  description: "Providing advanced AI solutions including generative AI, AI agents, financial AI systems, and enterprise chatbots.",
+  keywords: "AI, artificial intelligence, generative AI, AI agents, financial AI, chatbots, machine learning",
 };
 
 export default function RootLayout({
@@ -15,10 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <main>{children}</main>
-        </body>
+        {children}
+      </body>
     </html>
   );
 }

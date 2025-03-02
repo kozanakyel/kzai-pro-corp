@@ -8,57 +8,57 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
   }
 }
 
-body {
-  @apply text-black bg-white;
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
-/* header {
-  @apply bg-black text-white p-4 text-center;
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Custom amber gradient button */
+  .btn-amber-gradient {
+    @apply bg-gradient-to-r from-amber-500 to-yellow-400 text-white hover:from-amber-600 hover:to-yellow-500;
+  }
 }
-
-main {
-  @apply p-8;
-}
-
-footer {
-  @apply bg-black text-white text-center p-4 fixed bottom-0 w-full;
-} */
-
-/* .container {
-  @apply flex flex-col items-center justify-center text-center p-6 bg-white rounded-lg shadow-md;
-  max-width: 400px;
-  width: 100%;
-} */
-
-/* input, label {
-  @apply mt-2 mb-2 w-full;
-}
-
-input {
-  @apply p-2 border border-gray-300 rounded;
-}
-
-button {
-  @apply mt-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-700;
-} */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Gradient animations */
+.gradient-hover {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Service icons hover effect */
+.service-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.service-icon:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));
 }
